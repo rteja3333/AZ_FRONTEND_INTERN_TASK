@@ -1,0 +1,65 @@
+/* src/components/Sidebar/Sidebar.css */
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  /* src/components/Sidebar/Sidebar.css */
+.sidebar {
+  width: 20%; /* Adjust the width of the sidebar */
+  position: relative; /* Position within the flex container */
+  margin-top: -10px; /* Ensure sidebar starts below the header */
+  z-index: 1; /* Make sure sidebar stays under the header */
+  border-radius: 8px;
+}
+
+  
+  .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%; /* Centers the links within the sidebar */
+  }
+  
+  .sidebar-link {
+    display: flex;
+    align-items: flex-end; /* Aligns icon and text to the bottom */
+    padding: 15px 10px;
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s; /* Added font-weight transition */
+    font-family: 'DM Sans', sans-serif; /* Sets the font-family */
+    font-weight: 400; /* Normal weight */
+    text-align: left;
+  }
+  
+  .icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin-right: 8px; /* Space between icon and text */
+    position: relative;
+    top: -2px;
+    transition: filter 0.3s, transform 0.3s; /* Smooth effect for icon on hover */
+  }
+  
+  /* Hover effect */
+  .sidebar-link:hover {
+    background-color: #D6F4FF;
+    color: #000000;
+    font-weight: 700; /* Increases font weight on hover */
+    border-radius: 8px;
+
+  }
+  
+  .sidebar-link:hover .icon {
+    filter: brightness(1.3); /* Lightens the icon on hover */
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  }
+  

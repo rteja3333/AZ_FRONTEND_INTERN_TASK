@@ -1,0 +1,99 @@
+
+  
+
+.horizontal-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.horizontal-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(180deg, #EFF5FF 0%, rgba(239, 245, 255, 0) 100%);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.main-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+.main-link:hover {
+    background-color: #ffffff;
+    color: #000;
+    font-weight: 700;
+    border: 1px solid #A0C4FF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.new-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #A0C4FF;
+    margin-left: -10000px;
+}
+
+.link-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    transition: transform 0.3s;
+}
+
+.main-link:hover .link-icon,
+.new-link:hover .link-icon {
+    transform: scale(1.2);
+}
+
+/* 
+
+
+.part-box:hover {
+    border-color: #A0C4FF;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+
+
+/* src/components/MainBox/MainBox.css */
+
+
+.content-container {
+    display: flex;
+    gap: 30px; /* Space between Sidebar and MainBox */
+    align-items: flex-start; /* Align items to the top */
+    flex-grow: 1; /* Allow this section to take available space */
+    padding-top: 20px; /* Space between Header and content */
+  }
+
+  /* MainBox styling */
+.main-box {
+    flex-grow: 1; /* MainBox should take the remaining space after Sidebar */
+    padding: 5px;
+    padding-right: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #A4E6FF; /* Border around MainBox */
+    min-height: 50vh; /* Ensure it takes the remaining height */
+    margin-top: 0px; /* Optional, to create space between the header */
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  

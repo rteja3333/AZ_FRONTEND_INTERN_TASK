@@ -1,0 +1,215 @@
+/* Parts List container */
+.parts-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Wrapper for each part box */
+.part-box-wrapper {
+    position: relative;
+    margin-bottom: 30px; /* Space between each part-box-wrapper (adjust as needed) */
+    border-radius: 14px; /* Shared border radius */
+    overflow: hidden; /* Prevent overflow */
+    background-color: #ffffff; /* Background for the entire part (title + list) */
+    border: 1px solid #A4E6FF; /* Shared border color */
+    box-shadow: 0px 4px 20px 0px #172B4D1A; /* Added shadow to the part box */
+}
+
+/* Part box itself */
+.part-box {
+    position: relative;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Same border radius as part-box-wrapper */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column; /* Ensure it stacks title, icon line, description vertically */
+}
+
+/* Part title styling */
+.part-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    text-align: justify;
+    margin-bottom: -15px; /* Adjust this value to decrease the gap between title and description */
+}
+
+/* Part description styling */
+.part-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: justify;
+    margin-top: 0; /* Remove any margin-top to reduce the space */
+}
+
+/* New line container to hold icons horizontally */
+.icon-line {
+    display: flex;
+    justify-content: flex-start; /* Align the icons to the left */
+    position: absolute;
+    right: 10px; /* Place it on the right side of the part box */
+    top: 40%; /* Position it vertically in the center of the part box */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    gap: 10px; /* Space between icons */
+}
+
+/* Icon container styling */
+.icon-item {
+    display: flex;
+    flex-direction: row; /* Align icon and text side by side */
+    align-items: center; /* Vertically align text with the icon */
+    text-align: left; /* Ensure text aligns properly next to icon */
+}
+
+.icon-item img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Progress Percentage Box */
+.progress-percentage-box {
+    width: 110px;
+    height: 25px;
+    background-color: #EFF5FF;
+    border: 1px solid #99E4FF;
+    border-radius: 8px 8px 8px 8px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #172B4D;
+    z-index: 2; /* Ensure it stays above other content */
+}
+
+/* Flexbox container for icons and progress percentage box */
+.icon-line-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align to the right */
+    gap: 5px; /* Gap between the icon line and progress box */
+}
+
+/* Slide-down list styling */
+.slide-list {
+    height: 0; /* Initially hidden */
+    overflow: hidden; /* Prevent content from overflowing */
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 0px solid #A4E6FF;
+    box-shadow: 0px 4px 20px 0px #172B4D1A;
+    transition: height 0.3s ease-out; /* Smooth transition */
+}
+
+/* When the list is visible */
+.slide-list.visible {
+    height: auto; /* Dynamic height based on content */
+    padding: 10px 0; /* Add padding to give it space when expanded */
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    bottom: 0; /* Attach it directly to the bottom of the part box */
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-color: #EFF5FF; /* Default color for the unfilled part */
+    z-index: 1; /* Ensure it's above other content */
+    border-radius: 0 0 8px 8px; /* Matches the bottom border-radius of the part box */
+    transition: background 0.3s ease-out; /* Smooth transition for the progress bar background */
+}
+
+/* List item styling with padding and margin */
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px; /* Retain padding */
+    margin: 0; /* Retain margin between items */
+    position: relative; /* Position relative for pseudo-element positioning */
+    z-index: 1; /* Ensure content stays above pseudo-element */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Hover effect with background gradient covering entire item, including padding and margin */
+.list-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #D6F4FF, #ffffff);
+    z-index: -1; /* Place behind content */
+    border-radius: 8px; /* Optional: match border radius if needed */
+}
+
+
+/* Left side of list item */
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-side img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Right side of list item */
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-side img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.separator {
+    border: 1px solid transparent; /* Thinner border for a lighter look */
+    border-image-source: linear-gradient(90deg, rgba(23, 43, 77, 0) 0%, rgba(23, 43, 77, 0.3) 49.54%, rgba(5, 68, 94, 0) 100%);
+    border-image-slice: 1;
+    margin:-8px 0; /* Space between items */
+    opacity: 0.5; /* Lower opacity for a softer appearance */
+}
+
+
+/* Left side text styling */
+.left-side span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0rem;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    text-align: justify;
+}
+
+/* Right side text styling */
+.right-side span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.0rem;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    text-align: left;
+}

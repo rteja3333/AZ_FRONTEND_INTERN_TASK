@@ -1,0 +1,83 @@
+/* src/components/SubSidebar/SubSidebar.css */
+
+.sub-sidebar {
+    width: 35%; /* Adjust the width as necessary */
+    background-color: #ffffff; /* Background color */
+    position: relative; /* Position relative for absolute positioning of elements if needed */
+    margin-top: 00px; /* Margin to create space from the links above */
+    height: auto; /* Adjust height according to content */
+    display: flex;
+    flex-direction: column; /* Arrange links in a column */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0px 0; /* Vertical padding */
+}
+
+.sub-sidebar-links {
+    list-style-type: none; /* No bullet points for the list */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    width: 100%; /* Full width of the sidebar */
+    
+
+}
+
+.sub-sidebar-link {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between link text and hover text */
+    align-items: center; /* Center items vertically */
+    padding: 15px 15px; /* Padding for the links */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, font-weight 0.3s; /* Smooth transition for color and font weight */
+    font-family: 'DM Sans', sans-serif; /* Font style */
+    font-weight: 400; /* Normal weight */
+    position: relative; /* Required for hover text positioning */
+}
+
+/* Divider styling */
+.divider {
+    border-bottom: 0.5px solid; /* Set the thickness of the divider */
+    border-image-source: linear-gradient(90deg, rgba(143, 223, 255, 0) 0%, #8FDFFF 49.99%, rgba(143, 223, 255, 0) 100%); /* Gradient effect for the divider */
+    border-image-slice: 1; /* Ensure the gradient fills the border */
+    margin: 0px 0; /* Space above and below the divider */
+    width: 100%; /* Full width */
+}
+
+/* Text styling */
+.link-text {
+    flex-grow: 1; /* Allow link text to take available space */
+}
+
+/* Hover text styling */
+.hover-text {
+    opacity: 0; /* Initially hidden */
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Center icon and text */
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+    font-weight: 400;
+    margin-left: 10px; /* Space between the main link text and hover text */
+}
+
+/* Show hover text on link hover */
+.sub-sidebar-link:hover .hover-text {
+    opacity: 1; /* Show on hover */
+    background: #EFF5FF; /* Background color for hover text */
+    color: #608AD2; /* Text color for hover text */
+    padding: 0; /* No additional padding to avoid bulging */
+    border-radius: 4px; /* Optional: rounded corners for hover text background */
+}
+
+/* Icon styling */
+.info-icon {
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover effect for sub-sidebar links */
+.sub-sidebar-link:hover {
+    background: #EFF5FF; /* Light blue background on hover */
+    color: #000000; /* Text color change on hover */
+    font-weight: 700; /* Increase font weight on hover */
+    /* Remove additional padding or borders to prevent "popping" */
+}

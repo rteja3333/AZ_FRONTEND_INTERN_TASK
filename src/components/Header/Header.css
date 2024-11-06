@@ -1,0 +1,64 @@
+/* src/components/Header/Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff; /* White background for the header */
+    position: relative;
+    z-index: 1000; /* Ensure the header stays on top */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    width: 20px; /* Adjust size of the menu icon */
+    height: 20px;
+    margin-right: 20px; /* Space after the menu icon */
+    margin-left: 20px;
+  }
+  
+  .algozenith {
+    display: flex;
+    gap: 0; /* No gap between the letters */
+  }
+  
+  .algozenith span {
+    font-family: 'Squirrel', sans-serif; /* Apply Squirrel font */
+    font-weight: 900;
+    font-size: 28px; /* Adjust font size for the "ALGOZENITH" text */
+    color: #172B4D; /* You can adjust the color */
+  }
+  
+  /* Right side section with the blue square and second icon */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between the blue square and the second icon */
+  }
+  
+  .blue-square {
+    width: 30px;
+    height: 30px;
+    background-color:  #E7F8FF;
+    border-radius: 8px; /* Slight border-radius */
+    display: flex;
+    justify-content: center; /* Center the notification icon horizontally */
+    align-items: center; /* Center the notification icon vertically */
+  }
+  
+  .notification-icon {
+    width: 16px; /* Adjust size of the notification icon */
+    height: 16px;
+  }
+  
+  .second-icon {
+    width: 35px; /* Adjust size of the second icon */
+    height: 35px;
+    margin-right: 10px;
+  }
+  

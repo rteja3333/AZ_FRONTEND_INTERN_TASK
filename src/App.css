@@ -1,0 +1,17 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column; /* Stack header on top of Sidebar and MainBox */
+  min-height: 100vh; /* Full viewport height */
+}
+
+
+
+/* Sidebar styling */
+.sidebar {
+  width: 20%; /* Adjust the width of the sidebar */
+  position: relative; /* Ensure Sidebar stays in the flow of the layout */
+  z-index: 1; /* Ensure Sidebar is below the Header */
+  margin-top: 20px; /* Ensure Sidebar starts below the header */
+}
+
